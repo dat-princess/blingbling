@@ -1,7 +1,9 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "formdb");
 
-if (!$conn) {
-    die("May mali: " . mysqli_connect_error());
+$conn = new mysqli("localhost", "root", "", "fruityandveggies");
+
+if ($conn->connect_error) {
+    die("Database Connection Failed: " . $conn->connect_error);
 }
+
 ?>
